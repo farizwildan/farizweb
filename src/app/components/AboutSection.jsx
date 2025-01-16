@@ -13,7 +13,7 @@ import {
   FaFigma,
 } from "react-icons/fa";
 
-import { RiNextjsFill } from "react-icons/ri";
+import { RiNextjsLine } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 
 const TAB_DATA = [
@@ -56,7 +56,7 @@ const TAB_DATA = [
         </li>
         {/* Next.js Skill */}
         <li className="flex items-center gap-2">
-          <RiNextjsFill className="text-black text-3xl" />
+          <RiNextjsLine className="text-white text-3xl" />
         </li>
         {/* MySQL Skill */}
         <li className="flex items-center gap-2">
