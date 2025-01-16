@@ -3,9 +3,9 @@ import { HiHome, HiUser, HiRectangleGroup, HiEnvelope } from "react-icons/hi2";
 
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "work", path: "/work", icon: <HiRectangleGroup /> },
-  { name: "contact", path: "/contact", icon: <HiEnvelope /> },
+  { name: "about", path: "#about", icon: <HiUser /> },
+  { name: "work", path: "#project", icon: <HiRectangleGroup /> },
+  { name: "contact", path: "#contact", icon: <HiEnvelope /> },
 ];
 
 //next link

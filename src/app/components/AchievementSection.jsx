@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -17,14 +18,14 @@ const achievmentsList = [
   {
     prefix: "~",
     metric: "Users",
-    value: "100,000",
+    value: "100.000",
   },
   {
     metric: "Certificate",
     value: "9",
   },
   {
-    metric: "Years",
+    metric: "Years of Experience",
     value: "2",
   },
 ];
@@ -51,6 +52,7 @@ const AchievementSection = () => {
                       mass: 1,
                       friction: 100,
                       tensions: 140 * (index + 1),
+                      key: `animation-config-${index}`,
                     };
                   }}
                 />
