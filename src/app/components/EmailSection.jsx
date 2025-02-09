@@ -31,6 +31,8 @@ const EmailSection = ({ id }) => {
     const response = await fetch(endpoint, option);
     const resData = await response.json();
 
+    console.log("Response Data:", resData);
+
     if (response.status === 200) {
       console.log("Message Sent.");
       setEmailSubmitted(true);
