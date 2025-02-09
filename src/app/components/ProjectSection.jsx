@@ -49,7 +49,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Centralized",
+    title: "Centralized FIFGROUP member of ASTRA",
     image: "/images/projects/5.png",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "https://github.com/farizwildan/CENTRALIZED",
