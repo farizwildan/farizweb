@@ -45,7 +45,7 @@ const EmailSection = ({ id }) => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-white text-xl font-bold my-2">Let's Connect</h5>
+        <h5 className="text-xl font-bold my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {""}
           I'm currently looking for new opportunities, my inbox is always open.
@@ -70,10 +70,7 @@ const EmailSection = ({ id }) => {
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="text-white block text-sm mb-2 font-medium"
-            >
+            <label htmlFor="email" className="block text-sm mb-2 font-medium">
               Your Email
             </label>
             <input
@@ -88,7 +85,7 @@ const EmailSection = ({ id }) => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white block text-sm mb-2 font-medium"
+              className=" block text-sm mb-2 font-medium"
             >
               Subject
             </label>
@@ -104,7 +101,7 @@ const EmailSection = ({ id }) => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white block text-sm mb-2 font-medium"
+              className=" block text-sm mb-2 font-medium"
             >
               Message
             </label>
@@ -118,7 +115,7 @@ const EmailSection = ({ id }) => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-2"
+            className="bg-blue-500 hover:bg-blue-700 font-medium py-2.5 px-5 rounded-lg w-full mt-2"
           >
             Send Message
           </button>

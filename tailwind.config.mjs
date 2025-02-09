@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
+import colors from "tailwindcss/colors";
 
 export default {
   content: [
@@ -7,11 +7,16 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class", // Mode gelap berbasis class
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          DEFAULT: "#00ff99",
+          hover: "#00e187",
+        },
       },
     },
     colors: {
@@ -19,14 +24,6 @@ export default {
       primary: colors.purple,
       secondary: colors.pink,
     },
-    extend: {
-      colors: {
-        accent: {
-          DEFAULT: '#00ff99',
-          hover: '#00e187',
-        }
-      },
-    }
   },
   plugins: [],
 };

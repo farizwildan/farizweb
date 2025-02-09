@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+      <div className="grid grid-cols-1 sm:grid-cols-12 ">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
+          <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-300">
               Hello I'm, {""}
             </span>
@@ -46,7 +46,7 @@ const HeroSection = () => {
               target="_blank" // Untuk membuka di tab baru
               rel="noopener noreferrer" // Untuk alasan keamanan saat membuka di tab baru
             >
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-violet-500 to-red-500 hover:bg-slate-200 text-white">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-violet-500 to-red-500 hover:bg-slate-200">
                 Hire me
               </button>
             </a>
@@ -55,8 +55,8 @@ const HeroSection = () => {
               target="_blank" // Untuk membuka di tab baru
               rel="noopener noreferrer" // Untuk alasan keamanan saat membuka di tab baru
             >
-              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-violet-500 to-red-500 hover:bg-slate-800 text-white mt-3">
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-violet-500 to-red-500 hover:bg-slate-800 mt-3">
+                <span className="block bg-white text-black dark:bg-gray-900 dark:text-white hover:bg-slate-800 rounded-full px-5 py-2">
                   Download CV
                 </span>
               </button>

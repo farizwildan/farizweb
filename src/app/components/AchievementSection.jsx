@@ -40,13 +40,13 @@ const AchievementSection = () => {
               key={index}
               className="flex flex-col items-center justify-center w-full sm:w-1/2 lg:w-1/4 mx-auto "
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
+              <h2 className=" text-4xl font-bold flex flex-row">
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="id-ID"
-                  className="text-white text-4xl font-bold"
+                  className="text-4xl font-bold"
                   configs={(_, index) => {
                     return {
                       mass: 1,
