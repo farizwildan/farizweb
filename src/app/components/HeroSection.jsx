@@ -51,7 +51,7 @@ const HeroSection = () => {
               </button>
             </a>
             <a
-              href="https://drive.google.com/file/d/1Qz7Woe4lj-gOz6lIu6AI68M2FuyhFgt5/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1lq8w3drjJmMzRCl__YQzALh-yg47_401/view?usp=sharing"
               target="_blank" // Untuk membuka di tab baru
               rel="noopener noreferrer" // Untuk alasan keamanan saat membuka di tab baru
             >
