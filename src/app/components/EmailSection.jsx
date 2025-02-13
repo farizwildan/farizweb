@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
+import GithubDark from "../../../public/githubdark.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import InstagramIcon from "../../../public/instagram-icon.svg";
 import TwitterIcon from "../../../public/twitter-icon.svg";
+import TwitterDark from "../../../public/twitterdark.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -52,9 +54,18 @@ const EmailSection = ({ id }) => {
           Whether you have question or just want to greetings, I'll try best to
           get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-2 bg-white text-black dark:bg-gray-900 dark:text-white">
           <Link href="https://github.com/farizwildan">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image
+              src={GithubIcon}
+              alt="Github Icon"
+              className="w-12 h-12 hidden dark:block"
+            />
+            <Image
+              src={GithubDark}
+              alt="Github Icon"
+              className="w-12 h-12 block dark:hidden"
+            />
           </Link>
           <Link href="https://linkedin.com/in/farizwildanmeiawan">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
@@ -63,7 +74,16 @@ const EmailSection = ({ id }) => {
             <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
           <Link href="https://x.com/parizzz__">
-            <Image src={TwitterIcon} alt="Twitter Icon" />
+            <Image
+              src={TwitterIcon}
+              alt="Twitter Icon"
+              className="w-12 h-12 hidden dark:block"
+            />
+            <Image
+              src={TwitterDark}
+              alt="Twitter Icon"
+              className="w-12 h-12 block dark:hidden"
+            />
           </Link>
         </div>
       </div>
