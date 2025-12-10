@@ -54,11 +54,7 @@ const EmailSection = ({ id }) => {
           Whether you have question or just want to greetings, I'll try best to
           get back to you!
         </p>
-        {/* ADD: WARNING TEXT */}
-        <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
-          ✖ Email saat ini tidak dapat digunakan untuk mengirim pesan. Silakan
-          hubungi lewat sosial media di bawah.
-        </div>
+
         <div className="socials flex flex-row gap-2 bg-white text-black dark:bg-gray-900 dark:text-white">
           <Link href="https://github.com/farizwildan">
             <Image
@@ -91,6 +87,11 @@ const EmailSection = ({ id }) => {
             />
           </Link>
         </div>
+      </div>
+      {/* ADD: WARNING TEXT */}
+      <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
+        ✖ The email service is currently disabled. Feel free to reach me via my
+        social media.
       </div>
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
