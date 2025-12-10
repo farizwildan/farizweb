@@ -88,12 +88,14 @@ const EmailSection = ({ id }) => {
           </Link>
         </div>
       </div>
-      {/* ADD: WARNING TEXT */}
-      <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
-        ✖ The email service is currently disabled. Feel free to reach me via my
-        social media.
-      </div>
+
       <div>
+        {/* ADD: WARNING TEXT */}
+        <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
+          ✖ The email service is currently disabled. Feel free to reach me via
+          my social media.
+        </div>
+
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="email" className="block text-sm mb-2 font-medium">
