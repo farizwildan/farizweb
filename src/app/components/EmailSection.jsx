@@ -54,6 +54,11 @@ const EmailSection = ({ id }) => {
           Whether you have question or just want to greetings, I'll try best to
           get back to you!
         </p>
+        {/* ADD: WARNING TEXT */}
+        <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
+          ✖ Email saat ini tidak dapat digunakan untuk mengirim pesan. Silakan
+          hubungi lewat sosial media di bawah.
+        </div>
         <div className="socials flex flex-row gap-2 bg-white text-black dark:bg-gray-900 dark:text-white">
           <Link href="https://github.com/farizwildan">
             <Image
@@ -97,6 +102,7 @@ const EmailSection = ({ id }) => {
               name="email"
               type="email"
               id="email"
+              disabled
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="fariz@google.com"
@@ -113,6 +119,7 @@ const EmailSection = ({ id }) => {
               name="subject"
               type="text"
               id="subject"
+              disabled
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Just Saying Hi.."
@@ -128,6 +135,7 @@ const EmailSection = ({ id }) => {
             <textarea
               name="message"
               id="message"
+              disabled
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Hi Fariz, let's talk about.."
@@ -135,7 +143,8 @@ const EmailSection = ({ id }) => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 font-medium py-2.5 px-5 rounded-lg w-full mt-2"
+            disabled
+            className="bg-gray-600 cursor-not-allowed font-medium py-2.5 px-5 rounded-lg w-full mt-2"
           >
             Send Message
           </button>
