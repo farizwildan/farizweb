@@ -91,7 +91,13 @@ const EmailSection = ({ id }) => {
 
       <div>
         {/* ADD: WARNING TEXT */}
-        <div className="p-3 rounded-lg bg-yellow-900/30 border border-yellow-500 text-yellow-300 text-sm mb-4">
+        <div
+          className="
+              p-3 rounded-lg text-sm mb-4
+              bg-yellow-100 border border-yellow-600 text-yellow-800    /* Light mode */
+              dark:bg-yellow-900/30 dark:border-yellow-500 dark:text-yellow-300  /* Dark mode */
+            "
+        >
           ✖ The email service is currently disabled. Feel free to reach me via
           my social media.
         </div>
