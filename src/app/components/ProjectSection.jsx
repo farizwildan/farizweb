@@ -39,7 +39,7 @@ const projectsData = [
   {
     id: 4,
     title: "Lumina",
-    image: "/images/projects/lumina.png",
+    image: "/images/projects/lumina_new.png",
     tag: ["All", "Web", "3D"],
     gitUrl: "https://github.com/farizwildan/lumina-ecommerce",
     previewUrl: "https://luminariz.vercel.app/",
