@@ -1,5 +1,5 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, useRef } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import {
@@ -15,6 +15,7 @@ import {
 
 import { RiNextjsLine } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
+import { motion, useInView } from "framer-motion";
 
 const TAB_DATA = [
   {
@@ -79,6 +80,8 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul>
+        <li>- Software Developer at Cellix</li>
+        <li>- Freelance Web Developer at Centralized FIFGROUP member of ASTRA</li>
         <li>
           - User Interface / User Experience Designer at Diponegoro University
         </li>
@@ -114,6 +117,8 @@ const TAB_DATA = [
 const AboutSection = ({ id }) => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -122,10 +127,21 @@ const AboutSection = ({ id }) => {
   };
 
   return (
-    <section className="" id={id}>
+    <section className="" id={id} ref={ref}>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <img src="/images/download.gif" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src="/images/download.gif" width={500} height={500} alt="About Me GIF" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 0.5 }}
+          className="mt-4 md:mt-0 text-left flex flex-col h-full"
+        >
           <h2 className="text-4xl font-bold mb-4 mt-3">About Me</h2>
           <p className="text-base lg:text-lg">
             Hi there! I’m Fariz Wildan Meiawan, with a passion for being Full
@@ -169,7 +185,7 @@ const AboutSection = ({ id }) => {
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

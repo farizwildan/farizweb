@@ -38,12 +38,11 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Calculator Caesar Chiper",
-    image: "/images/projects/4.png",
-    tag: ["All", "Web", "Mobile"],
-    gitUrl:
-      "https://github.com/farizwildan/caesar_cipher_encrypt_calculator.git",
-    previewUrl: "",
+    title: "Lumina",
+    image: "/images/projects/lumina.png",
+    tag: ["All", "Web", "3D"],
+    gitUrl: "/",
+    previewUrl: "/",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -90,9 +89,15 @@ const ProjectSection = ({ id }) => {
 
   return (
     <section>
-      <h2 className="text-center text-4xl font-bold mt-4" id={id}>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
+        className="text-center text-4xl font-bold mt-4"
+        id={id}
+      >
         My Projects
-      </h2>
+      </motion.h2>
       <div className="flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}

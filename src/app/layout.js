@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google"; // Modern font
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -19,8 +15,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-black dark:bg-gray-900 dark:text-white antialiased">
+    <html lang="en" className={outfit.variable}>
+      <body className="bg-white text-black dark:bg-gray-900 dark:text-white antialiased overflow-x-hidden">
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div className="stars"></div>
+          <div className="stars2"></div>
+          <div className="stars3"></div>
+        </div>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

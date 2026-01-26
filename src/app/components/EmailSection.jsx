@@ -8,6 +8,7 @@ import TwitterIcon from "../../../public/twitter-icon.svg";
 import TwitterDark from "../../../public/twitterdark.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const EmailSection = ({ id }) => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -45,8 +46,13 @@ const EmailSection = ({ id }) => {
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
       id={id}
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="z-10"
+      >
         <h5 className="text-xl font-bold my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {""}
@@ -55,7 +61,7 @@ const EmailSection = ({ id }) => {
           get back to you!
         </p>
 
-        <div className="socials flex flex-row gap-2 bg-white text-black dark:bg-gray-900 dark:text-white">
+        <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/farizwildan">
             <Image
               src={GithubIcon}
@@ -87,9 +93,14 @@ const EmailSection = ({ id }) => {
             />
           </Link>
         </div>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         {/* ADD: WARNING TEXT */}
         <div
           className="
@@ -163,7 +174,7 @@ const EmailSection = ({ id }) => {
             </p>
           )}
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

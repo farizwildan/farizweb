@@ -16,7 +16,7 @@ export async function POST(req) {
             html: `
         <div>
           <h1>${subject}</h1>
-          <p>Thank you for contacting us!</p>
+          <p>Thank you for contacting me!</p>
           <p>New message submitted:</p>
           <p>${message}</p>
         </div>
@@ -28,9 +28,9 @@ export async function POST(req) {
             { status: 200, headers: { 'Content-Type': 'application/json' } }
         );
     } catch (error) {
-        console.error("Error sending email:", error);
+        console.error("Error sending email details:", error);
         return new Response(
-            JSON.stringify({ error: "Failed to send email." }),
+            JSON.stringify({ error: "Failed to send email.", details: error.message }),
             { status: 500, headers: { 'Content-Type': 'application/json' } }
         );
     }
